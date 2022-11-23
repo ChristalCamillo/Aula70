@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import br.com.zup.listacompras.CHAVE_PRODUTO
+import br.com.zup.listacompras.ERROR_TEXT_DETALHE
+import br.com.zup.listacompras.ERROR_TEXT_NOME
 import br.com.zup.listacompras.R
 import br.com.zup.listacompras.adapter.ProdutoAdapter
 import br.com.zup.listacompras.databinding.FragmentProdutoBinding
@@ -82,10 +84,10 @@ class ProdutoFragment : Fragment() {
 
         private fun exibirMensagemErro() {
         if(binding.etNomeProduto.text.isEmpty()){
-            binding.etNomeProduto.error = "Por favor preencha o campo de nome"
+            binding.etNomeProduto.error = ERROR_TEXT_NOME
         }
         if(binding.etDetalheProduto.text.isEmpty()){
-            binding.etDetalheProduto.error = "Por favor preencha o campo de detalhe"}
+            binding.etDetalheProduto.error = ERROR_TEXT_DETALHE}
     }
 
     private fun limparCampoEdicao() {
